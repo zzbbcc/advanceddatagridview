@@ -1,6 +1,6 @@
 ﻿namespace TestForm
 {
-    partial class FormDGV
+    partial class FormGV
     {
         /// <summary>
         /// Required designer variable.
@@ -28,39 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgv = new Zuby.ADGV.AdvancedDataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
+            this.gv = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.gv)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgv
+            // gv
             // 
-            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv.FilterAndSortEnabled = true;
-            this.dgv.Location = new System.Drawing.Point(0, 0);
-            this.dgv.Name = "dgv";
-            this.dgv.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dgv.RowTemplate.Height = 24;
-            this.dgv.Size = new System.Drawing.Size(241, 192);
-            this.dgv.TabIndex = 0;
+            this.gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gv.Location = new System.Drawing.Point(0, 0);
+            this.gv.Name = "gv";
+            this.gv.Size = new System.Drawing.Size(241, 192);
+            this.gv.TabIndex = 2;
             // 
-            // FormDGV
+            // FormGV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(241, 192);
-            this.Controls.Add(this.dgv);
-            this.Name = "FormDGV";
+            this.Controls.Add(this.gv);
+            this.Name = "FormGV";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.FormDGV_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
+            this.Load += new System.EventHandler(this.ormDGV_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gv)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Zuby.ADGV.AdvancedDataGridView dgv;
+        private System.Windows.Forms.DataGridView gv;
     }
 }
 
