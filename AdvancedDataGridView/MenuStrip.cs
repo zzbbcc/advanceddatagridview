@@ -21,6 +21,8 @@ namespace Zuby.ADGV
     [System.ComponentModel.DesignerCategory("")]
     internal partial class MenuStrip : ContextMenuStrip
     {
+        /// <summary> Payload for MenuStrip to test memory leaks </summary>
+        private byte[] buf = new byte[5 * 1024 * 1024];
 
         #region public enum
 
@@ -146,6 +148,10 @@ namespace Zuby.ADGV
             MinimumSize = new Size(PreferredSize.Width, PreferredSize.Height);
             //resize
             ResizeBox(MinimumSize.Width, MinimumSize.Height);
+        }
+        ~MenuStrip()
+        {
+            Console.WriteLine();
         }
 
         /// <summary>
