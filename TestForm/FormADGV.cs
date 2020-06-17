@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace TestForm
 {
-    public partial class FormDGV : Form
+    public partial class FormADGV : Form
     {
         private DataTable _dt = null;
 
@@ -13,12 +13,12 @@ namespace TestForm
             Interval = 100
         };
 
-        public FormDGV()
+        public FormADGV()
         {
             InitializeComponent();
         }
 
-        public FormDGV(DataTable dt)
+        public FormADGV(DataTable dt)
             : this()
         {
             if (dt == null)
@@ -40,7 +40,7 @@ namespace TestForm
                 _dt = dt;
         }
 
-        private void FormDGV_Load(object sender, EventArgs e)
+        private void FormADGV_Load(object sender, EventArgs e)
         {
             dgv.DataSource = _dt;
 

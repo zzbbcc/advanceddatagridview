@@ -1,6 +1,6 @@
 ﻿namespace TestForm
 {
-    partial class FormDGV
+    partial class FormADGV
     {
         /// <summary>
         /// Required designer variable.
@@ -41,18 +41,18 @@
             this.dgv.Name = "dgv";
             this.dgv.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgv.RowTemplate.Height = 24;
-            this.dgv.Size = new System.Drawing.Size(241, 192);
+            this.dgv.Size = new System.Drawing.Size(241, 177);
             this.dgv.TabIndex = 0;
             // 
-            // FormDGV
+            // FormADGV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(241, 192);
+            this.ClientSize = new System.Drawing.Size(241, 177);
             this.Controls.Add(this.dgv);
-            this.Name = "FormDGV";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.FormDGV_Load);
+            this.Name = "FormADGV";
+            this.Text = "FormADGV";
+            this.Load += new System.EventHandler(this.FormADGV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
 
