@@ -22,7 +22,7 @@ namespace Zuby.ADGV
     internal partial class MenuStrip : ContextMenuStrip
     {
         /// <summary> Payload for MenuStrip to test memory leaks </summary>
-        private byte[] buf = new byte[5 * 1024 * 1024];
+        //private byte[] buf = new byte[5 * 1024 * 1024];
 
         #region public enum
 

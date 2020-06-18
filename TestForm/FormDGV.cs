@@ -7,6 +7,8 @@ namespace TestForm
     public partial class FormDGV : Form
     {
         private DataTable _dt = null;
+        private bool _showMenuStrip = false;
+        private bool _keepOnLoad = false;
 
         private Timer _timer1 = new Timer
         {
@@ -18,9 +20,12 @@ namespace TestForm
             InitializeComponent();
         }
 
-        public FormDGV(DataTable dt)
+        public FormDGV(DataTable dt, bool showMenuStrip = false, bool keepOnLoad = false)
             : this()
         {
+            _showMenuStrip = showMenuStrip;
+            _keepOnLoad = keepOnLoad;
+
             if (dt == null)
             {
                 _dt = new DataTable();
@@ -44,8 +49,14 @@ namespace TestForm
         {
             dgv.DataSource = _dt;
 
-            _timer1.Enabled = true;
-            _timer1.Tick += new System.EventHandler(OnTimerEvent);
+            if(!_keepOnLoad) 
+            { 
+                _timer1.Enabled = true;
+                _timer1.Tick += new System.EventHandler(OnTimerEvent);
+            }
+
+            if(_showMenuStrip)
+                dgv.ShowAllMenuStrip();
         }
 
         private void OnTimerEvent(object sender, EventArgs e)

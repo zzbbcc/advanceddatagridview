@@ -66,6 +66,21 @@ namespace TestForm
             }
         }
 
+        private void btnFormDGVShowMenuStripShow_Click(object sender, EventArgs e)
+        {
+            for(int i = 0; i < NumWin; i++) {
+                FormDGV f1 = new FormDGV(_dt, showMenuStrip:true);
+                f1.Show();
+
+                if(!SpeedTest) {
+                    while(!f1.IsDisposed) {
+                        Application.DoEvents();
+                        System.Threading.Thread.Sleep(100);
+                    }
+                }
+            }
+        }
+
         private void btnFormDGVShowDialog_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < NumWin; i++)
@@ -110,6 +125,11 @@ namespace TestForm
         {
             GC.Collect();
             lbMemoryUsage.Text = (GC.GetTotalMemory(false) / (1024 * 1024)).ToString() + " MB";
+        }
+
+        private void btnDGVShowOnce_Click(object sender, EventArgs e)
+        {
+            new FormDGV(_dt, keepOnLoad:true).Show();
         }
     }
 }

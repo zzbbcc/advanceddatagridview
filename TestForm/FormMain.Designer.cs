@@ -33,13 +33,15 @@
             this.lbMemoryUsage = new System.Windows.Forms.Label();
             this.btnFormGVShowDialog = new System.Windows.Forms.Button();
             this.btnFormGVShow = new System.Windows.Forms.Button();
+            this.btnFormDGVShowMenuStripShow = new System.Windows.Forms.Button();
+            this.btnDGVShowOnce = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnFormDGVShow
             // 
-            this.btnFormDGVShow.Location = new System.Drawing.Point(49, 51);
+            this.btnFormDGVShow.Location = new System.Drawing.Point(49, 47);
             this.btnFormDGVShow.Name = "btnFormDGVShow";
-            this.btnFormDGVShow.Size = new System.Drawing.Size(136, 25);
+            this.btnFormDGVShow.Size = new System.Drawing.Size(136, 23);
             this.btnFormDGVShow.TabIndex = 0;
             this.btnFormDGVShow.Text = "FormDGV.Show()";
             this.btnFormDGVShow.UseVisualStyleBackColor = true;
@@ -47,9 +49,9 @@
             // 
             // btnFormDGVShowDialog
             // 
-            this.btnFormDGVShowDialog.Location = new System.Drawing.Point(49, 116);
+            this.btnFormDGVShowDialog.Location = new System.Drawing.Point(49, 148);
             this.btnFormDGVShowDialog.Name = "btnFormDGVShowDialog";
-            this.btnFormDGVShowDialog.Size = new System.Drawing.Size(136, 25);
+            this.btnFormDGVShowDialog.Size = new System.Drawing.Size(136, 23);
             this.btnFormDGVShowDialog.TabIndex = 1;
             this.btnFormDGVShowDialog.Text = "FormDGV.ShowDialog()";
             this.btnFormDGVShowDialog.UseVisualStyleBackColor = true;
@@ -57,9 +59,9 @@
             // 
             // btnGCCollect
             // 
-            this.btnGCCollect.Location = new System.Drawing.Point(49, 183);
+            this.btnGCCollect.Location = new System.Drawing.Point(49, 247);
             this.btnGCCollect.Name = "btnGCCollect";
-            this.btnGCCollect.Size = new System.Drawing.Size(278, 25);
+            this.btnGCCollect.Size = new System.Drawing.Size(278, 23);
             this.btnGCCollect.TabIndex = 2;
             this.btnGCCollect.Text = "GC.Collect()";
             this.btnGCCollect.UseVisualStyleBackColor = true;
@@ -68,17 +70,17 @@
             // lbMemoryUsage
             // 
             this.lbMemoryUsage.AutoSize = true;
-            this.lbMemoryUsage.Location = new System.Drawing.Point(37, 254);
+            this.lbMemoryUsage.Location = new System.Drawing.Point(37, 312);
             this.lbMemoryUsage.Name = "lbMemoryUsage";
-            this.lbMemoryUsage.Size = new System.Drawing.Size(84, 13);
+            this.lbMemoryUsage.Size = new System.Drawing.Size(82, 12);
             this.lbMemoryUsage.TabIndex = 3;
             this.lbMemoryUsage.Text = "Memory Usage :";
             // 
             // btnFormGVShowDialog
             // 
-            this.btnFormGVShowDialog.Location = new System.Drawing.Point(191, 116);
+            this.btnFormGVShowDialog.Location = new System.Drawing.Point(191, 148);
             this.btnFormGVShowDialog.Name = "btnFormGVShowDialog";
-            this.btnFormGVShowDialog.Size = new System.Drawing.Size(136, 25);
+            this.btnFormGVShowDialog.Size = new System.Drawing.Size(136, 23);
             this.btnFormGVShowDialog.TabIndex = 5;
             this.btnFormGVShowDialog.Text = "FormGV.ShowDialog()";
             this.btnFormGVShowDialog.UseVisualStyleBackColor = true;
@@ -86,19 +88,41 @@
             // 
             // btnFormGVShow
             // 
-            this.btnFormGVShow.Location = new System.Drawing.Point(191, 51);
+            this.btnFormGVShow.Location = new System.Drawing.Point(191, 47);
             this.btnFormGVShow.Name = "btnFormGVShow";
-            this.btnFormGVShow.Size = new System.Drawing.Size(136, 25);
+            this.btnFormGVShow.Size = new System.Drawing.Size(136, 23);
             this.btnFormGVShow.TabIndex = 4;
             this.btnFormGVShow.Text = "FormGV.Show()";
             this.btnFormGVShow.UseVisualStyleBackColor = true;
             this.btnFormGVShow.Click += new System.EventHandler(this.btnFormGVShow_Click);
             // 
+            // btnFormDGVShowMenuStripShow
+            // 
+            this.btnFormDGVShowMenuStripShow.Location = new System.Drawing.Point(49, 98);
+            this.btnFormDGVShowMenuStripShow.Name = "btnFormDGVShowMenuStripShow";
+            this.btnFormDGVShowMenuStripShow.Size = new System.Drawing.Size(278, 23);
+            this.btnFormDGVShowMenuStripShow.TabIndex = 6;
+            this.btnFormDGVShowMenuStripShow.Text = "FormDGV.Show() + MenuStrip.Show()";
+            this.btnFormDGVShowMenuStripShow.UseVisualStyleBackColor = true;
+            this.btnFormDGVShowMenuStripShow.Click += new System.EventHandler(this.btnFormDGVShowMenuStripShow_Click);
+            // 
+            // btnDGVShowOnce
+            // 
+            this.btnDGVShowOnce.Location = new System.Drawing.Point(49, 198);
+            this.btnDGVShowOnce.Name = "btnDGVShowOnce";
+            this.btnDGVShowOnce.Size = new System.Drawing.Size(136, 23);
+            this.btnDGVShowOnce.TabIndex = 7;
+            this.btnDGVShowOnce.Text = "FormDGV.Show() Once";
+            this.btnDGVShowOnce.UseVisualStyleBackColor = true;
+            this.btnDGVShowOnce.Click += new System.EventHandler(this.btnDGVShowOnce_Click);
+            // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(381, 309);
+            this.ClientSize = new System.Drawing.Size(381, 420);
+            this.Controls.Add(this.btnDGVShowOnce);
+            this.Controls.Add(this.btnFormDGVShowMenuStripShow);
             this.Controls.Add(this.btnFormGVShowDialog);
             this.Controls.Add(this.btnFormGVShow);
             this.Controls.Add(this.lbMemoryUsage);
@@ -121,5 +145,7 @@
         private System.Windows.Forms.Label lbMemoryUsage;
         private System.Windows.Forms.Button btnFormGVShowDialog;
         private System.Windows.Forms.Button btnFormGVShow;
+        private System.Windows.Forms.Button btnFormDGVShowMenuStripShow;
+        private System.Windows.Forms.Button btnDGVShowOnce;
     }
 }

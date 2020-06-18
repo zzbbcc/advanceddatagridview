@@ -665,7 +665,6 @@ namespace Zuby.ADGV
         }
 
         #endregion
-
     }
 
     internal delegate void ColumnHeaderCellEventHandler(object sender, ColumnHeaderCellEventArgs e);

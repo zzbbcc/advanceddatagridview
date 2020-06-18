@@ -1074,5 +1074,15 @@ namespace Zuby.ADGV
 
         #endregion
 
+        #region For Testing Memory Leaks
+        public void ShowAllMenuStrip()
+        {
+            foreach(DataGridViewColumn column in this.Columns) {
+                ColumnHeaderCell cell = column.HeaderCell as ColumnHeaderCell;
+                if(cell != null)
+                    Cell_FilterPopup(cell, new ColumnHeaderCellEventArgs(cell.MenuStrip, column));
+            }
+        }
+        #endregion
     }
 }

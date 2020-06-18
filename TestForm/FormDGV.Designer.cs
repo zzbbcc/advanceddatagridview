@@ -41,14 +41,14 @@
             this.dgv.Name = "dgv";
             this.dgv.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgv.RowTemplate.Height = 24;
-            this.dgv.Size = new System.Drawing.Size(241, 192);
+            this.dgv.Size = new System.Drawing.Size(336, 280);
             this.dgv.TabIndex = 0;
             // 
             // FormDGV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(241, 192);
+            this.ClientSize = new System.Drawing.Size(336, 280);
             this.Controls.Add(this.dgv);
             this.Name = "FormDGV";
             this.Text = "Form1";
